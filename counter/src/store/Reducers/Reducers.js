@@ -3,6 +3,8 @@ import { combineReducers } from 'redux';
 
 const initialCount = 0;
 
+const ThemeInitialStatus = false;
+
 const CountReducer = (count = initialCount, action) => {
     switch(action.type) {
         case ACTIONTYPES.INCREASE:
@@ -14,6 +16,17 @@ const CountReducer = (count = initialCount, action) => {
     }
 }
 
+const ThemeReducer = (state = ThemeInitialStatus, action) => {
+    switch(action.type) {
+        case ACTIONTYPES.TOGGLETHEME:
+            // Remember when toggle from false to true and true to false do not return an object, just return !state
+            return !state
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    Count: CountReducer
+    Count: CountReducer,
+    Theme: ThemeReducer
 })

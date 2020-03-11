@@ -12,3 +12,9 @@ export const decrease = () => {
     }
 }
 
+export const toggleTheme = () => {
+    return {
+        type: ACTIONTYPES.TOGGLETHEME
+    }
+}
+
