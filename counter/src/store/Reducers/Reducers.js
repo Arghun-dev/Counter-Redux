@@ -8,9 +8,9 @@ const ThemeInitialStatus = false;
 const CountReducer = (count = initialCount, action) => {
     switch(action.type) {
         case ACTIONTYPES.INCREASE:
-            return count + 1
+            return count + action.amount
         case ACTIONTYPES.DECREASE:
-            return count - 1
+            return count - action.amount
         default:
             return count
     }

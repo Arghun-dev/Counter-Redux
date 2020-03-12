@@ -1,14 +1,16 @@
 import * as ACTIONTYPES from './ActionTypes';
 
-export const increase = () => {
+export const increase = (amount) => {
     return {
-        type: ACTIONTYPES.INCREASE
+        type: ACTIONTYPES.INCREASE,
+        amount
     }
 }
 
-export const decrease = () => {
+export const decrease = (amount) => {
     return {
-        type: ACTIONTYPES.DECREASE
+        type: ACTIONTYPES.DECREASE,
+        amount
     }
 }
 

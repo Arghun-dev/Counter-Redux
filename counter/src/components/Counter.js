@@ -62,17 +62,36 @@ function Counter({classes, count, theme, dispatch}){
                     <div style={{textAlign: 'center', marginTop: '2rem'}}>
                         <Button 
                             variant="contained" 
-                            style={{backgroundColor: '#4caf50', marginRight: '.5rem'}} 
-                            onClick={() => dispatch(Actions.increase())}
+                            style={{backgroundColor: '#4caf50', marginRight: '.5rem', paddingLeft: '1.5rem'}} 
+                            onClick={() => dispatch(Actions.increase(1))}
+                        >   
+                            1
+                            <ExpandLessIcon />
+                        </Button>
+                        <Button 
+                            variant="contained" 
+                            style={{backgroundColor: '#4caf50', marginRight: '.5rem', paddingLeft: '1.5rem'}} 
+                            onClick={() => dispatch(Actions.increase(5))}
                         >
+                            5
                             <ExpandLessIcon />
                         </Button>
                         <Button 
                             variant="contained" 
                             color='secondary' 
-                            onClick={() => dispatch(Actions.decrease())}
-                            style={{marginLeft: '.5rem'}}
+                            onClick={() => dispatch(Actions.decrease(1))}
+                            style={{marginLeft: '.5rem', paddingLeft: '1.5rem'}}
                         >
+                            1
+                            <ExpandMoreIcon />
+                        </Button>
+                        <Button 
+                            variant="contained" 
+                            color='secondary' 
+                            onClick={() => dispatch(Actions.decrease(5))}
+                            style={{marginLeft: '.5rem', paddingLeft: '1.5rem'}}
+                        >
+                            5
                             <ExpandMoreIcon />
                         </Button>
                     </div>
